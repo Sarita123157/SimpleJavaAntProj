@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Simple Java Ant Project" default="run">
+    <target name="run" depends="compile">
+        <java classname="com.nshan.java.sjap.MyMainClass">
+            <classpath path="build" />
+        </java>
+    </target>
+    <target name="compile">
+        <mkdir dir="build" />
+        <javac srcdir="./src" destdir="build" includeantruntime="false"/>
+    </target>
+</project>
